@@ -33,6 +33,7 @@ const IMG = {
   "off-w11": "images/off-w11.jpg",
   "off-w12": "images/off-w12.jpg",
   "osha-cert": "images/osha-cert.png",
+  "fluidsim": "images/fluidsim.jpg", // stock photo: Festo, CC BY-SA 4.0, via Wikimedia Commons
   "season-w01": "images/season-w01.jpg",
   "season-w02": "images/season-w02.jpg",
   "season-w03": "images/season-w03.jpg",
@@ -70,7 +71,7 @@ const BLURB = {
   gearbox:["Project 01","Building a gearbox to drive a wheel, plus my technical drawings for the shaft.","gearbox-built"],
   minibot:["Project 02","A 16-week build of a competition drive robot, from wood frame to final course.","minibot-w11"],
   osha:["Project 03","Ten hours of workplace safety training, a final test, and certification.","osha-cert"],
-  fluidsim:["Project 04","Twelve units on pneumatics and automation, ending in a three-station challenge.",null],
+  fluidsim:["Project 04","Twelve units on pneumatics and automation, ending in a three-station challenge.","fluidsim","images/festo-logo.svg"],
   offseason:["Part A","Wiring, soldering, pit crew practice, and offseason competitions in Sacramento and Madera.","off-w07"],
   season:["Part B","Kickoff to competition: field builds, drive base rebuild, turret, shooter, and auto-scouting.","season-w06"],
 };
@@ -86,10 +87,10 @@ function pager(id){
   const i = order.indexOf(id), prev = order[i-1], next = order[i+1];
   return `<div class="pager">${prev?`<a href="#${prev}"><span class="mono">← Previous</span><b>${TITLES[prev]}</b></a>`:""}${next?`<a class="next" href="#${next}"><span class="mono">Next →</span><b>${TITLES[next]}</b></a>`:""}</div>`;
 }
-const CONTACT = `<section class="sheet"><span class="tag">CONTACT</span><div class="pad contact"><div><span class="mono">Get in touch</span><h2>Questions about a project?</h2></div><div class="email"><code id="email">100034183@mvla.net</code><button type="button" data-copy>Copy email</button></div></div></section>`;
+const CONTACT = `<section class="sheet"><span class="tag">CONTACT</span><div class="pad contact"><div><span class="mono">Get in touch</span><h2>Questions about a project?</h2></div><div class="email"><code id="email">lukasjarschel2010@gmail.com</code><button type="button" data-copy>Copy email</button></div></div></section>`;
 
 function cards(ids){
-  return `<div class="cards">${ids.map(s=>`<a class="card" href="#${s}">${BLURB[s][2]?ph(BLURB[s][2],TITLES[s]):`<div class="ph empty"><span class="pl">12 units</span></div>`}<div class="cb"><span class="mono">${BLURB[s][0]}</span><h3>${TITLES[s]}</h3><p>${BLURB[s][1]}</p></div></a>`).join("")}</div>`;
+  return `<div class="cards">${ids.map(s=>`<a class="card" href="#${s}">${ph(BLURB[s][2],TITLES[s]).replace(/<\/div>$/, BLURB[s][3]?`<img class="logo" src="${BLURB[s][3]}" alt="Festo logo"></div>`:"</div>")}<div class="cb"><span class="mono">${BLURB[s][0]}</span><h3>${TITLES[s]}</h3><p>${BLURB[s][1]}</p></div></a>`).join("")}</div>`;
 }
 
 /* Weekly entry renderer: [label, title, paragraphs|bullets, imgKey, videoId, bullets?] */

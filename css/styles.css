@@ -93,6 +93,7 @@ h2.sec{font-size:clamp(32px,5vw,46px);font-weight:700;text-transform:uppercase;m
 .card{display:flex;flex-direction:column;border:1.5px solid var(--ink);background:var(--sheet);text-decoration:none;color:var(--ink);min-width:0;transition:transform .15s}
 .card:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
 .card .ph{aspect-ratio:16/10;border-bottom:1.5px solid var(--ink)}
+.card .ph .logo{position:absolute;left:10px;bottom:10px;width:38%;max-width:120px;height:auto;object-fit:contain;background:#fff;padding:6px 8px;border:1px solid var(--ink)}
 .card .cb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px}
 .card h3{font-size:24px;font-weight:600;text-transform:uppercase}
 .card p{font-size:14px;color:var(--ink-2);line-height:1.45}
