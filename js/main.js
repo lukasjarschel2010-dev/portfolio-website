@@ -193,8 +193,10 @@ home(){ return `
   <div class="pad two">
     <div><h2 class="sec">About me</h2>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <p class="lead">Hi, I'm Lukas, and I'm a student at Los Altos High School. Some of my passions are playing basketball, playing video games, and watching football.</p>
-        <p>On this website you can see the projects I've worked on, starting with Robotics I in 9th grade: a gearbox, a Minibot built over 16 weeks, OSHA certification, and twelve FluidSIM automation units. In Robotics II I joined the competition team for the offseason and the build season.</p>
+        <p class="lead">Hi, I'm Lukas Jarschel, a junior at Los Altos High School with a passion for engineering, science, technology, and problem-solving.</p>
+        <p>I enjoy turning ideas into real-world projects through hands-on design, research, and experimentation. My interests span biomedical engineering and AI with a focus on creating practical solutions to meaningful challenges.</p>
+        <p>Outside of academics, I'm a soccer and lacrosse player who enjoys volunteering, exploring new technologies, and learning by building.</p>
+        <p>This website is a collection of my projects, experiments, and the things I've learned along the way.</p>
       </div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;justify-content:center">
